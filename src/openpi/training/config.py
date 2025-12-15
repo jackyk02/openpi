@@ -862,7 +862,7 @@ _CONFIGS = [
         data=RLDSDroidDataConfig(
             repo_id="droid",
             # Set this to the path to your DROID RLDS dataset (the parent directory of the `droid` directory).
-            rlds_data_dir="/mnt/pi-data/kevin",
+            rlds_data_dir="/root/data",
             action_space=droid_rlds_dataset.DroidActionSpace.JOINT_POSITION,
             assets=AssetsConfig(
                 assets_dir="gs://openpi-assets/checkpoints/pi05_base/assets/",
@@ -877,7 +877,7 @@ _CONFIGS = [
             decay_lr=5e-5,
         ),
         num_train_steps=100_000,
-        batch_size=256,
+        batch_size=2,
         log_interval=100,
         save_interval=5000,
         keep_period=10_000,
